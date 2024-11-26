@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro</title>
+    <link rel="stylesheet" href="login.css"> 
+</head>
+<body>
+    <main>
+        <div class="contenedor__todo">
+            <!-- Caja trasera con botones para alternar entre iniciar sesión o registrarse -->
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para conocernos</p>
+                    <button id="btn__iniciar_sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para iniciar una nueva aventura</p>
+                    <button id="btn__registrarse">Registrarse</button>
+                </div>
+            </div>
+
+            <!-- Formularios de login y registro -->
+            <div class="contenedor__login-register">
+                <!-- Formulario de Iniciar Sesión -->
+                <form action="usuario.php" method="POST" class="formulario__login">
+                    <h2>Iniciar Sesión</h2>
+                    <input type="text" name="usuario" placeholder="Usuario" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit">Entrar</button>
+                </form>
+
+                <!-- Formulario de Registro -->
+                <form action="registro.php" method="POST" class="formulario__register">
+                    <h2>Registrarse</h2>
+                    <input type="text" name="nombre" placeholder="Nombre Completo" required>
+                    <input type="email" name="correo" placeholder="Correo Electrónico" required>
+                    <input type="text" name="usuario" placeholder="Usuario" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Alternar entre formularios de login y registro
+        document.getElementById('btn__iniciar_sesion').addEventListener('click', function() {
+            document.querySelector('.formulario__login').style.display = 'block';
+            document.querySelector('.formulario__register').style.display = 'none';
+        });
+
+        document.getElementById('btn__registrarse').addEventListener('click', function() {
+            document.querySelector('.formulario__login').style.display = 'none';
+            document.querySelector('.formulario__register').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
