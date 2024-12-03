@@ -1,0 +1,260 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 80px;  /* Evita que el contenido quede tapado por el footer fijo */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.search-bar {
+    display: flex;
+}
+
+input[type="text"] {
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+}
+
+#cart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#cart-items button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cart-items button:hover {
+    background-color: darkred;
+}
+
+.hidden {
+    display: none;
+}
+
+.book-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.book-item {
+    flex: 1 1 200px;
+    margin: 20px;
+    max-width: 250px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.book-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.book-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.book-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-item button:hover {
+    background-color: #0056b3;
+}
+
+#ver-mas-btn {
+    text-decoration: underline;
+    color: #007bff; /* Color similar al de un enlace de hipervínculo */
+    cursor: pointer;
+}
+
+#ver-mas-btn:hover {
+    color: #0056b3; /* Color cuando el enlace es hover (pasa el mouse por encima) */
+}
+
+
+
+/* Modal del carrito */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 247, 247);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+#cart-total {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+html, body {
+    height: 100%;  /* Asegura que el documento ocupe toda la altura del navegador */
+    margin: 0;  /* Elimina márgenes predeterminados */
+}
+
+body {
+    display: flex;
+    flex-direction: column;  /* Organiza el contenido en una columna */
+}
+
+.container {
+    flex: 1;  /* Ocupa todo el espacio disponible entre el header y el footer */
+}
+
+footer {
+    text-align: center;  /* Alinea el texto en el centro */
+    padding: 20px 0;  /* Espaciado superior e inferior */
+    background-color: #f1f1f1;  /* Fondo suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra sutil para dar profundidad */
+    z-index: 10;  /* Se asegura que esté sobre otros contenidos */
+    width: 100%;  /* Ocupa todo el ancho */
+}
+
+
+footer .logo {
+    margin: 0 10px;  /* Espacio entre los logos */
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;  /* Alineación horizontal */
+    justify-content: center;  /* Centra los enlaces */
+    gap: 20px;  /* Espacio entre los enlaces */
+    margin-top: 10px;  /* Espacio superior entre los logos y los enlaces */
+}
+
+.footer-links li {
+    display: inline;  /* Los elementos de la lista son en línea */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;  /* Color oscuro para los enlaces */
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #007BFF;  /* Cambio de color al pasar el cursor */
+}
