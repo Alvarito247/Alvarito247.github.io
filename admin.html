@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro</title>
+    <link rel="stylesheet" href="admin.css"> 
+</head>
+<body>
+    <main>
+        <div class="contenedor__todo">
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>Hola Administrador</h3>
+                    <p>Inicia sesión para administrar Usuarios y Productos</p>
+                </div>
+
+            <div class="contenedor__login-register">
+                <form action="admin.php" method="post">
+                    <h2>Iniciar Sesión</h2>
+                    <input type="text" name="usuario" placeholder="Usuario" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit">Entrar</button>
+                </form>
+
+    <script>
+        document.getElementById('btn__iniciar_sesion').addEventListener('click', function() {
+            document.querySelector('.formulario__login').style.display = 'block';
+            document.querySelector('.formulario__register').style.display = 'none';
+        });
+
+        document.getElementById('btn__registrarse').addEventListener('click', function() {
+            document.querySelector('.formulario__login').style.display = 'none';
+            document.querySelector('.formulario__register').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

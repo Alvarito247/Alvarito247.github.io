@@ -1,0 +1,7 @@
+/* Estilo para los botones de administración */
+.admin-button {
+    margin: 10px 0; /* Espacio superior e inferior */
+    padding: 10px 20px; /* Tamaño del botón */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer;
+}
